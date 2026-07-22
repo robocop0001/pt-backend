@@ -19,6 +19,9 @@ class Address(models.Model):
     store = models.ForeignKey(Store, on_delete=models.CASCADE, related_name="addresses")
     line = models.CharField(max_length=255)
 
+    class Meta:
+        unique_together = ('store', 'line')
+
 class Item(models.Model):
     store = models.ForeignKey(Store, on_delete=models.CASCADE, related_name='items')
     name  = models.CharField(max_length=100)

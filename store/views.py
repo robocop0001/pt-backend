@@ -12,7 +12,7 @@ Let's see how this works!
 
 from django.shortcuts import render
 
-from django.shortcuts import viewsets
+from rest_framework import viewsets
 from rest_framework.permissions import AllowAny
 from store.models import Store, Item, Address
 from store.serializers import StoreSerializer, ItemSerializer, AddressSerializer

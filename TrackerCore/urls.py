@@ -22,5 +22,5 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
 
-    path('/api', include((router.urls, 'core_api'), name_space='core_api'))
+    path('/api/', include((router.urls, 'core_api'), namespace='core_api'))
 ]
